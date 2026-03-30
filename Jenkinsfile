@@ -25,6 +25,7 @@ pipeline {
         stage('Docker Build') {
             steps {
                 sh 'docker build -t aceest-fitness .'
+                sh 'docker run -p 5000:5000 accest-fitness'
             }
         }
     }
