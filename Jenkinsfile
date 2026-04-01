@@ -25,7 +25,10 @@ pipeline {
         stage('Docker Build') {
             steps {
                 sh 'docker build -t aceest-fitness .'
-                sh 'docker run -p 5000:5000 accest-fitness'
+        stage('Docker Deploy') {
+            steps {
+                sh 'docker stop aceest-container || true && docker rm aceest-container || true'  
+                sh 'docker run -d -p 5000:5000 --name aceest-container accest-fitness'
             }
         }
     }
