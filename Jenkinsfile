@@ -26,6 +26,7 @@ pipeline {
             steps {
                 sh 'docker build -t aceest-fitness .'
             }
+        }
         stage('Docker Deploy') {
             steps {
                 sh 'docker stop aceest-container || true && docker rm aceest-container || true'  
@@ -33,5 +34,4 @@ pipeline {
             }
         }
     }
-}
 }
