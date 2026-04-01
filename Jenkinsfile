@@ -30,7 +30,7 @@ pipeline {
         stage('Docker Deploy') {
             steps {
                 sh 'docker stop aceest-container || true && docker rm aceest-container || true'  
-                sh 'docker run -d -p 5050:5050 --name aceest-container aceest-fitness'
+                sh 'docker run -d -p 5000:5000 --name aceest-container aceest-fitness'
             }
         }
     }
