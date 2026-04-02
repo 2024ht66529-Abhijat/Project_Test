@@ -25,6 +25,9 @@ jobs:
     - name: Run tests
       run: pytest
       
+    build:
+    runs-on: self-hosted
+    steps:  
     - name: Trigger Jenkins Job
       uses: appleboy/jenkins-action@v1
       with:
