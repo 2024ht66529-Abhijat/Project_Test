@@ -36,6 +36,6 @@ jobs:
         url: "http://172.31.104.244:8080/"
         user: "cloud"
         token: ${{ secrets.JENKINS_TOKEN }}
-        job: "ACEest_CI_CD_pipiline"
+        job: "ACEest-CI_CD_pipeline"
         wait: true # Optional: Wait for the resul
   
