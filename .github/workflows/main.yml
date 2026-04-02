@@ -33,9 +33,9 @@ jobs:
     - name: Trigger Jenkins Job
       uses: appleboy/jenkins-action@v1
       with:
-        url: "http://172.17.102.81:8080/"
-        user: "Abhijat-2024ht66529"
+        url: "http://172.31.104.244:8080/"
+        user: "cloud"
         token: ${{ secrets.JENKINS_TOKEN }}
-        job: "ACEest-CI-pipelines2"
+        job: "ACEest_CI_CD_pipiline"
         wait: true # Optional: Wait for the result
   
