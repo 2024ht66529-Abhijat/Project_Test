@@ -24,3 +24,13 @@ jobs:
 
     - name: Run tests
       run: pytest
+      
+    - name: Trigger Jenkins Job
+      uses: appleboy/jenkins-action@v1
+      with:
+        url: "http://localhost:8080/"
+        user: "Abhijat-2024ht66529"
+        token: 119a2be34d5c6a6a698e54fb4fe5eee341
+        job: "ACEest-CI-pipelines2"
+        wait: true # Optional: Wait for the result
+  
