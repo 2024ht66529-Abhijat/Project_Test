@@ -37,5 +37,5 @@ jobs:
         user: "cloud"
         token: ${{ secrets.JENKINS_TOKEN }}
         job: "ACEest_CI_CD_pipiline"
-        wait: true # Optional: Wait for the result
+        wait: true # Optional: Wait for the resul
   
