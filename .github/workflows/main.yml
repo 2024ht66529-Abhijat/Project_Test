@@ -41,4 +41,7 @@ jobs:
         token: ${{ secrets.JENKINS_TOKEN }}
         job: "ACEest-CI_CD_pipeline"
         wait: true # Optional: Wait for the result
+on:
+  workflow_dispatch:
+
   
