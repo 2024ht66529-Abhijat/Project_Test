@@ -22,6 +22,9 @@ jobs:
         pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Lint & Syntax Check
+      run: python -m py_compile run.py
+
     - name: Run tests
       run: pytest
       
@@ -37,5 +40,5 @@ jobs:
         user: "cloud"
         token: ${{ secrets.JENKINS_TOKEN }}
         job: "ACEest-CI_CD_pipeline"
-        wait: true # Optional: Wait for the resul
+        wait: true # Optional: Wait for the result
   
