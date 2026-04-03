@@ -36,7 +36,7 @@ jobs:
     - name: Trigger Jenkins Job
       uses: appleboy/jenkins-action@v1
       with:
-        url: "http://172.31.104.244:8080/"
+        url: ${{secrete.JENKINS_URL}}
         user: "cloud"
         token: ${{ secrets.JENKINS_TOKEN }}
         job: "ACEest-CI_CD_pipeline"
