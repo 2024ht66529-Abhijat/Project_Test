@@ -4,6 +4,24 @@ on:
   push:
     branches: [ "main" ]
 
+
+# This enables manual triggering from the Actions tab
+
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Choose environment to deploy'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+          - staging
+          - production
+      run-tests:
+        description: 'Run tests before deployment?'
+        required: false
+        default: 'true'
+        type: boolean
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -41,7 +59,7 @@ jobs:
         token: ${{ secrets.JENKINS_TOKEN }}
         job: "ACEest-CI_CD_pipeline"
         wait: true # Optional: Wait for the result
-on:
-  workflow_dispatch:
+
+ 
 
   
